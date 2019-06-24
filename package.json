@@ -1,0 +1,19 @@
+{
+  "name": "graphql-server-napi",
+  "version": "1.0.0",
+  "description": "Experimenting with graphql",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Aditya V",
+  "license": "ISC",
+  "dependencies": {
+    "0http": "^1.0.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.3.1",
+    "restana": "^3.2.1"
+  }
+}
