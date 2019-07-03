@@ -1,3 +1,5 @@
+const system = require('../napi-system-module/build/Release/system.node');
+
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 
@@ -8,12 +10,20 @@ const app = express();
 let customSchema = buildSchema(`
 	type Query {
 		serverVersion: String,
+		moduleVersion: String,
+		moduleVersion1: String,
 	}
 `);
 
 let rootResolver = {
 	serverVersion: () => {
 		return "0.1-alpha";
+	},
+	moduleVersion: () => {
+		return system.moduleVersion();
+	},
+	moduleVersion1: () => {
+		return system.moduleVersion1();
 	},
 };
 
